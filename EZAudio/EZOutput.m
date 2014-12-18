@@ -316,6 +316,7 @@ static OSStatus OutputRenderCallback(void                        *inRefCon,
 #pragma mark - Events
 -(void)startPlayback {
   if( !_isPlaying ){
+    [self _configureOutput];
     [EZAudio checkResult:AudioOutputUnitStart(_outputUnit)
                operation:"Failed to start output unit"];
     _isPlaying = YES;

@@ -229,6 +229,7 @@ static OSStatus inputCallback(void                          *inRefCon,
 -(void)startFetchingAudio {
   if( !_isFetching ){
     // Start fetching input
+    [self _createInputUnit];
     [EZAudio checkResult:AudioOutputUnitStart(self->microphoneInput)
                operation:"Microphone failed to start fetching audio"];
     _isFetching = YES;
