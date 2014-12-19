@@ -168,6 +168,17 @@
   [self _clearRollingPlot];
 }
 
+-(void)clearAll
+{
+    _scrollHistoryIndex = 0;
+    [self _clearBufferPlot];
+    [self _clearRollingPlot];
+    
+    _hasBufferPlotData = NO;
+    _hasRollingPlotData = NO;
+    
+}
+
 -(void)_clearBufferPlot
 {
   if( _hasBufferPlotData )

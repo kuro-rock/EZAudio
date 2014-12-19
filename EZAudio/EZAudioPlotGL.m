@@ -698,6 +698,14 @@ static CVReturn DisplayLinkCallback(CVDisplayLinkRef displayLink,
 #endif
 }
 
+-(void)clearAll{
+#if TARGET_OS_IPHONE
+    [self.glViewController clearAll];
+#elif TARGET_OS_MAC
+#endif
+    
+}
+
 #pragma mark - Graph Methods
 +(void)fillGraph:(EZAudioPlotGLPoint*)graph
    withGraphSize:(UInt32)graphSize

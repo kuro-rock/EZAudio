@@ -108,6 +108,11 @@
  */
 -(void)clear;
 
+/**
+ Clears all data from the audio plot (includes both EZPlotTypeBuffer and EZPlotTypeRolling)
+ */
+-(void)clearAll;
+
 #pragma mark - Get Samples
 ///-----------------------------------------------------------
 /// @name Updating The Plot
