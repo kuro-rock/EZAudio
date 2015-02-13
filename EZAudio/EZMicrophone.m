@@ -509,7 +509,7 @@ static OSStatus inputCallback(void                          *inRefCon,
 -(void)_configureStreamFormatWithSampleRate:(Float64)sampleRate {
   // Set the stream format
   if( !_customASBD ){
-    streamFormat = [EZAudio stereoCanonicalNonInterleavedFormatWithSampleRate:sampleRate];
+    streamFormat = [EZAudio stereoFloatNonInterleavedFormatWithSampleRate:sampleRate];
   }
   else {
     streamFormat.mSampleRate = sampleRate;
